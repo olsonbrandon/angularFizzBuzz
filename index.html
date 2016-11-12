@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="src/styles.css"/>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <h1>Welcome to FizzBuzz!</h1>
+  <body id="app" ng-app="FizzBuzz" ng-controller="FizzBuzzController as fb" >
+    <div id="subtitle">
+      <input class="input" ng-model="fb.start" placeholder="                 start"/>
+      <input class="input" ng-model="fb.end" placeholder="                 end"/>
+      <button class="input" type="button" ng-click="fb.generate()">FizzBuzz Me!</button>
+    </div>
+    <div ng-repeat="result in fb.results" ng-class="result.classes">
+      {{result.val}}
+    </div>
+    <script type="text/javascript" src="src/angular.min.js"></script>
+    <script type="text/javascript" src="src/app.js"></script>
+    <script type="text/javascript" src="src/fizzBuzzCtrl.js"></script>
+    <script type="text/javascript" src="src/fizzBuzzService.js"></script>
+  </body>
+</html>
